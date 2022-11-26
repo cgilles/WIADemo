@@ -1,12 +1,10 @@
 #pragma once
 
 #include <QtWidgets/QMainWindow>
-#include <WiaVideo.h>
-#include <Wia.h>
+#include <wiavideo.h>
+#include <wia.h>
 #include <windows.h>
-#include <PortableDevice.h>
-#include <PortableDeviceTypes.h>
-#include <PortableDeviceApi.h>
+#include <portabledevicetypes.h>
 #include <QMessageBox>
 #include <QSharedPointer>
 #include <QVector>
@@ -24,16 +22,19 @@ class WIADemo : public QMainWindow
     Q_OBJECT
 
 public:
+
     WIADemo(QWidget *parent = Q_NULLPTR);
     ~WIADemo();
     void resizeEvent(QResizeEvent* ev);
 
 private:
-    Ui::WIADemoClass ui;
-    IWiaDevMgr* m_pWiaDevMgr;
-    IPortableDeviceManager* m_pPortableDeviceManager;
+
+    Ui::WIADemoClass                     ui;
+    IWiaDevMgr*                          m_pWiaDevMgr;
+    IPortableDeviceManager*              m_pPortableDeviceManager;
     QVector<QSharedPointer<DeviceModel>> m_devices;
 
 public slots:
+
     void ItemDoubleClickedSlot(QListWidgetItem* item);
 };

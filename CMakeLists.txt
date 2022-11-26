@@ -14,9 +14,9 @@ find_package(Qt5 REQUIRED COMPONENTS
 )
 
 add_executable(wiademo
+    main.cpp
     ControlDlg.cpp
     DeviceModel.cpp
-    main.cpp
     WIADemo.cpp
     ControlDlg.ui
     WIADemo.ui

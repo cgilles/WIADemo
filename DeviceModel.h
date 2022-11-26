@@ -1,8 +1,8 @@
 #pragma once
 
 #include <QObject>
-#include <WiaVideo.h>
-#include <Wia.h>
+#include <wiavideo.h>
+#include <wia.h>
 #include <windows.h>
 #include <fstream>
 #include <vector>
